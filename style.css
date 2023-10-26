@@ -1,0 +1,80 @@
+h1 {
+    color: gray;
+    font-size: 50px;
+    margin: 0;
+  }
+  
+  body {
+    height: 100vh;
+  }
+  
+  /* START BELOW THIS LINE */
+  /* Change the background color on the body element to navy blue when the viewport width is 800px or less */
+  @media (max-width: 800px) {
+    body {
+        background-color: navy;
+    }
+  }
+  
+  /* Change the background color on the body element to orange when the viewport width is 600px or less */
+  @media (max-width: 600px) {
+    body {
+        background-color: orange;
+    }
+  }
+  
+  /* Give the “One” h1 a 10px dashed gray border & the “Three” h1 a 10px dotted gray border when viewport width is 600px or greater  AND the viewport height is 400px or less */
+  @media (min-width: 600px) and (max-height: 400px) {
+    #one, #three {
+        border: 10px dashed gray;
+    }
+  }
+  
+  /* Give the “Two” h1 a 10px solid gray top border when viewport width is 900px or more OR the viewport height is 500px or more */
+  @media (min-width: 900px) or (min-height: 500px) {
+    #two {
+        border-top: 10px dashed gray;
+    }
+  }
+
+  /* When the viewport is in landscape mode (Width is greater than height) have the three h1 elements display in a row (HINT: Flexbox) */
+  @media (orientation = landscape) {
+    h1 {
+        display: inline-flex;
+    }
+  }
+
+  /* When the viewport is in portrait mode (Height greater than width) have the three h1 elements display in a column in the center of the screen */
+  @media (orientation = portrait) {
+    h1 {
+        text-align: center;
+    }
+  }
+
+  /* BONUS */
+  /* Have all the text display in uppercase and change the color to green ONLY when the user attempts to print the page. */
+  @media () {
+    h1 {
+        text-transform: uppercase;
+        color: green;
+    }
+  }
+  /* Have the “Two” h1 text color match the background color set to the body element whenever it changes from white to another color. If completed correctly the “Two” h1 will seem invisible when the background color set to the body is NOT white (HINT: Navy & Orange). */
+  @media (max-width: 800px) {
+    #two {
+        color: navy;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #two {
+        color: orange;
+    }
+  }
+
+  /* Make all the text on the webpage Italicized when the viewport width is a length from 750px to 775px AND the viewport height is a length from 550px to 575px */
+  @media (min-width: 750px) and (max-width: 775px) and (min-height: 550px) and (max-height: 575px) {
+    body {
+        font-style: italic;
+    }
+  }
